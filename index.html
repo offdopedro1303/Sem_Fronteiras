@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Sem Fronteiras</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Times New Roman', serif;
+      background-color: #F1EFE7;
+      color: #1612d3;
+    }
+
+    nav {
+      background-color: #F1EFE7;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 80px;
+      border-bottom: 1px solid #1612d3;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 80px;
+    }
+
+    .textos-navbar {
+      display: flex;
+      gap: 130px;
+      margin: 0 auto;
+    }
+
+    .textos-navbar a {
+      text-decoration: none;
+      color: #1612d3;
+      font-size: 30px;
+      font-weight: bold;
+    }
+
+    .textos-navbar a:hover {
+      text-decoration: underline;
+    }
+
+    .navbar-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-grow: 1;
+    }
+
+    /* Sessão 1 */
+    .sessao1 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 60px 80px 40px;
+      flex-wrap: wrap;
+    }
+
+    .logo-completo {
+      max-width: 350px;
+    }
+
+    .logo-completo img {
+      width: 100%;
+    }
+
+    .texto1 {
+      max-width: 600px;
+      padding-left: 40px;
+    }
+
+    .texto1 h2 {
+      font-style: italic;
+      font-weight: bold;
+      font-size: 28px;
+      color: #1612d3;
+      margin-bottom: 10px;
+    }
+
+    .texto1 p {
+      font-size: 20px;
+      line-height: 1.6;
+      color: #1612d3;
+    }
+
+    /* Missão */
+    .texto2 {
+      text-align: center;
+      padding: 40px 60px;
+    }
+
+    .texto2 h2 {
+      font-size: 50px;
+      font-style: italic;
+      position: relative;
+      display: inline-block;
+      padding: 0 20px;
+    }
+
+    .texto2 h2::before,
+    .texto2 h2::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 190px;
+      height: 2px;
+      background-color: #1612d3;
+    }
+
+    .texto2 h2::before {
+      right: 100%;
+      margin-right: 20px;
+    }
+
+    .texto2 h2::after {
+      left: 100%;
+      margin-left: 20px;
+    }
+
+    .texto2 p {
+      margin-top: 5px;
+      font-size: 20px;
+      line-height: 1.6;
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* LUGARES */
+    .lugares {
+      text-align: center;
+      padding: 40px 20px 60px;
+    }
+
+    .titulo-lugares {
+      display: inline-block;
+      font-size: 38px;
+      font-style: italic;
+      background-color: #1A00D3;
+      color: #F1EFE7;
+      padding: 20px 80px;
+      border-radius: 60px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      margin-bottom: 40px;
+    }
+
+    .cards-lugares {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 80px;
+    }
+
+    .lugar {
+      text-align: center;
+    }
+
+    .lugar img {
+      width: 230px;
+      height: 230px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .lugar h3 {
+      font-family: 'Times New Roman', serif;
+      color: #1A00D3;
+      font-style: italic;
+      font-size: 30px;
+      margin-top: 15px;
+      margin-bottom: 5px;
+    }
+
+    .lugar p {
+      font-family: 'Times New Roman', serif;
+      color: #1A00D3;
+      font-style: italic;
+      font-size: 20px;
+    }
+
+    .texto3 {
+      text-align: center;
+      padding: 40px 60px;
+    }
+
+    .texto3 h2 {
+      font-size: 50px;
+      font-style: italic;
+      position: relative;
+      display: inline-block;
+      padding: 0 20px;
+    }
+
+    .texto3 h2::before,
+    .texto3 h2::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 190px;
+      height: 2px;
+      background-color: #1612d3;
+    }
+
+    .texto3 h2::before {
+      right: 100%;
+      margin-right: 20px;
+    }
+
+    .texto3 h2::after {
+      left: 100%;
+      margin-left: 20px;
+    }
+
+    .texto3 p {
+      margin-top: 5px;
+      font-size: 20px;
+      line-height: 1.6;
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* PLANOS */
+    .planos {
+      padding: 60px 60px 80px;
+    }
+
+    .plano {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      margin-bottom: 20px;
+    }
+
+    .plano.reverso {
+      flex-direction: row-reverse;
+    }
+
+    .plano-texto {
+      max-width: 500px;
+      text-align: center;
+    }
+
+    .plano-texto h3 {
+      font-size: 30px;
+      font-style: italic;
+      color: #1A00D3;
+      margin-bottom: 20px;
+    }
+
+    .plano-texto p {
+      font-size: 18px;
+      color: #1A00D3;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .plano-texto button {
+      background-color: #1A00D3;
+      color: #F1EFE7;
+      border: none;
+      font-size: 20px;
+      font-style: italic;
+      font-weight: bold;
+      padding: 10px 30px;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+      transition: background 0.3s;
+    }
+
+    .plano-texto button:hover {
+      background-color: #12008a;
+    }
+
+    .plano-imagem img {
+      width: 280px;
+      height: 280px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+    .rodape {
+      background-color: #1A00D3;
+      color: #F1EFE7;
+      padding: 40px 20px;
+      text-align: center;
+      font-style: italic;
+      font-size: 18px;
+      font-family: 'Georgia', serif;
+    }
+
+    .rodape strong {
+      font-size: 24px;
+      font-style: italic;
+      margin-right: 20px;
+    }
+
+  </style>
+</head>
+<body>
+  <!-- Sessão NAVBAR -->
+  <nav>
+    <div class="logo">
+      <img src="logo.png" alt="Logo Minimalista">
+    </div>
+    <div class="navbar-container">
+      <div class="textos-navbar">
+        <a href="#">HOME</a>
+        <a href="#">LUGARES</a>
+        <a href="#">PLANOS</a>
+        <a href="#">CONTATO</a>
+      </div>
+    </div>
+  </nav>
+  <!-- Sessão 1 -->
+  <section class="sessao1">
+    <div class="logo-completo">
+      <img src="logo1.png" alt="Logo Completa Sem Fronteiras">
+    </div>
+    <div class="texto1">
+      <h2>“voluntariado internacional”</h2>
+      <p>
+        O voluntariado internacional é uma experiência transformadora que une o desejo de ajudar ao espírito de aventura. 
+        Trata-se de dedicar seu tempo e habilidades a causas sociais, ambientais ou educacionais em outro país, enquanto imerge 
+        em uma cultura diferente, amplia seus horizontes e desenvolve competências pessoais e profissionais.
+        <br><br>
+        Seja trabalhando com comunidades carentes, protegendo o meio ambiente, ensinando idiomas ou apoiando projetos de saúde, 
+        o voluntariado internacional permite que você faça a diferença no mundo enquanto vive uma jornada de autoconhecimento e 
+        crescimento. É uma troca única: você contribui para um impacto positivo e, em retorno, ganha histórias inesquecíveis, 
+        conexões globais e uma visão mais ampla da humanidade.
+      </p>
+    </div>
+  </section>
+
+  <section class="texto2">
+    <h2>Nossa Missão</h2>
+    <p>
+      Na Sem Fronteiras, acreditamos que o mundo não tem barreiras quando unimos forças por um propósito maior. 
+      Nossa missão é conectar pessoas a oportunidades de voluntariado internacional que transformam vidas — tanto de 
+      quem parte quanto de quem recebe.
+      <br><br>
+      ✔ Promover o impacto positivo através de projetos sociais, ambientais e educacionais ao redor do globo.
+      <br>
+      ✔ Oferecer experiências seguras e significativas, com suporte personalizado em todas as etapas da jornada.
+      <br>
+      ✔ Inspirar uma mentalidade global, incentivando o respeito à diversidade cultural e a responsabilidade social.
+      <br><br>
+      Para nós, intercâmbio não é apenas sobre viajar — é sobre crescer, compartilhar e deixar um legado. Seu mundo sem limites começa aqui!
+      Sem Fronteiras: Conectando corações e culturas.
+    </p>
+  </section>
+
+  <!-- Sessão LUGARES -->
+  <section class="lugares">
+    <h2 class="titulo-lugares">LUGARES</h2>
+    <div class="cards-lugares">
+      <div class="lugar">
+        <img src="newheaven.png" alt="New Heaven">
+        <h3>New Heaven</h3>
+        <p>Yale</p>
+      </div>
+      <div class="lugar">
+        <img src="sandiego.jpg" alt="San Diego">
+        <h3>San Diego</h3>
+        <p>SDSU</p>
+      </div>
+      <div class="lugar">
+        <img src="newyork.png" alt="Nova York">
+        <h3>Nova York</h3>
+        <p>Columbia</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sessão PLANOS -->
+    <section class="planos">
+        <section class="texto3">
+            <h2>planos</h2>
+        </section>
+
+    <div class="plano">
+        <div class="plano-texto">
+        <h3>90 DIAS</h3>
+        <p>Viver três meses em outro país é muito mais do que uma viagem — é uma oportunidade única para se reinventar. Com a Sem Fronteiras, você mergulha em uma cultura diferente, 
+            aprende sob novas perspectivas e descobre habilidades que nem sabia que tinha.
+            Seja em uma cidade vibrante ou em um destino tranquilo, o intercâmbio de 90 dias oferece tempo suficiente para criar raízes, fazer amigos internacionais e voltar para 
+            casa com experiências que ficarão para sempre na sua memória.
+            <br>
+            Quer saber mais? Conte conosco para planejar sua experiência!</p>
+        <button>QUERO ESTE</button>
+        </div>
+        <div class="plano-imagem">
+        <img src="90dias.png" alt="Plano 90 dias">
+        </div>
+    </div>
+
+    <div class="plano reverso">
+        <div class="plano-texto">
+        <h3>HIGH SCHOOL</h3>
+        <p>Viver um ano letivo no exterior durante o ensino médio é muito mais que estudar em outra língua – é transformar-se em um cidadão do mundo antes mesmo de entrar na faculdade. 
+            Na Sem Fronteiras, acreditamos que essa é a fase perfeita para expandir horizontes: quando a mente está aberta, os laços são mais autênticos e cada experiência vira uma lição para a vida.
+            Aqui, você não só domina um idioma como pensa nele. Não apenas conhece, mas vive a cultura. Volta com malas cheias de histórias, confiança para encarar qualquer desafio e uma visão de 
+            futuro que poucos têm na sua idade.
+            <br>
+            O mundo te espera. Qual país vai te chamar de "aluno"?</p>
+        <button>QUERO ESTE</button>
+        </div>
+        <div class="plano-imagem">
+        <img src="hightschool.png" alt="Plano High School">
+        </div>
+    </div>
+    </section>
+
+    <div class="plano">
+        <div class="plano-texto">
+        <h3>PÓS GRADUAÇÃO</h3>
+        <p>Fazer uma especialização ou mestrado no exterior é muito mais que um diploma internacional – é uma transformação completa na sua carreira e na sua visão de mundo. Com a Sem Fronteiras, 
+            você vai além das salas de aula: vive na prática o que só viu na teoria, conecta-se com os melhores profissionais do seu campo e volta ao mercado com um diferencial que poucos têm.
+            Imagine desenvolver sua pesquisa em laboratórios de ponta na Alemanha, discutir cases reais nas universidades americanas que formam CEOs, ou especializar-se em sustentabilidade 
+            enquanto vive na Nova Zelândia, referência global no tema. Aqui, o networking acontece no café da manhã, os projetos têm impacto real e cada desafio te prepara para liderar no seu setor.
+            Volte fluente não só no idioma, mas na linguagem do sucesso. Seja o profissional que o mundo espera.
+            <br>
+            Sua carreira sem fronteiras começa aqui.</p>
+        <button>QUERO ESTE</button>
+        </div>
+        <div class="plano-imagem">
+        <img src="posgraduacao.png" alt="Plano Pós Graduação">
+        </div>
+    </div>
+
+    <div class="plano reverso">
+        <div class="plano-texto">
+        <h3>WORK AND TRAVEL</h3>
+        <p>O programa Work and Travel da Sem Fronteiras é a porta de entrada para uma experiência única que combina trabalho remunerado e aventura internacional. Projetado especialmente para estudantes 
+            universitários, este plano oferece a oportunidade de viver por alguns meses em outro país, onde você poderá desenvolver habilidades profissionais, aprimorar um novo idioma e, claro, explorar 
+            destinos incríveis nos seus momentos livres.
+            Imagine trabalhar em um resort nos Estados Unidos durante o verão, atendendo turistas do mundo todo enquanto pratica inglês no dia a dia. Ou então, aproveitar as estações de ski no Canadá, 
+            onde cada turno de trabalho abre portas para novas amizades e paisagens deslumbrantes. Aqui, você não só ganha um salário para cobrir seus gastos, como também vive uma rotina cheia de desafios 
+            que aceleram seu amadurecimento pessoal e profissional.
+            <br>
+            O mundo é o seu destino. Qual será o seu próximo passo?</p>
+        <button>QUERO ESTE</button>
+        </div>
+        <div class="plano-imagem">
+        <img src="workandtravel.png" alt="Plano Work and Travel">
+        </div>
+    </div>
+    </section>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <!-- Sessão FOOTER -->
+    <footer class="rodape">
+    <p><strong>contato</strong> &nbsp;&nbsp;&nbsp; (XX) 0000-0000 &nbsp;&nbsp;&nbsp; @sem_fronteiras &nbsp;&nbsp;&nbsp; Rua do Bobos, 0</p>
+    </footer>
+
+</body>
+</html>
