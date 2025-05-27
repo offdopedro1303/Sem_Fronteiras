@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plano 90 Dias</title>
+  <style>
+body {
+  margin: 0;
+  padding-top: 100px;
+  font-family: 'Times New Roman', serif;
+  background-color: #F1EFE7;
+  color: #1612d3;
+}
+
+nav {
+  background-color: #F1EFE7;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 80px;
+  border-bottom: 1px solid #1612d3;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 80px;
+}
+
+.textos-navbar {
+  display: flex;
+  gap: 130px;
+  margin: 0 auto;
+}
+
+.textos-navbar a {
+  text-decoration: none;
+  color: #1612d3;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.textos-navbar a:hover {
+  text-decoration: underline;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #1A00D3;
+  font-weight: bold;
+}
+
+/* PLANO DETALHE */
+.plano-detalhe {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.img-circular img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #888;
+}
+
+.plano-detalhe h1 {
+  color: #1A00D3;
+  font-size: 50px;
+  font-style: italic;
+  margin: 30px 0;
+}
+
+.descricao {
+  max-width: 800px;
+  margin: auto;
+  color: #1A00D3;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+.competencias-valores {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 60px;
+  padding: 40px 20px;
+}
+
+.texto-valores {
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+  color: #222;
+}
+
+.titulo-competencias {
+  color: #1A00D3;
+  font-size: 32px;
+}
+
+.descricao-competencias {
+  color: #1A00D3;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.titulo-valores {
+  background-color: #1A00D3;
+  color: white;
+  padding: 8px 16px;
+  font-size: 26px;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.lista-valores {
+  list-style: none;
+  padding: 0;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.lista-valores li {
+  margin-bottom: 15px;
+}
+
+.plano-texto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 40px;
+}
+
+.total-container {
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+}
+
+.total-label {
+  font-weight: bold;
+  font-size: 28px;
+}
+
+.total-container button {
+  background-color: #1A00D3;
+  color: #F1EFE7;
+  border: none;
+  font-size: 26px;
+  font-style: italic;
+  font-weight: bold;
+  padding: 15px 40px;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  transition: background 0.3s;
+  margin: 10px 0;
+}
+
+.total-container button:hover {
+  background-color: #12008a;
+}
+
+.observacao-total {
+  font-style: italic;
+  font-size: 14px;
+}
+
+.botao-assinar {
+  background-color: white;
+  border: 2px solid #1A00D3;
+  color: #1A00D3;
+  font-size: 22px;
+  padding: 12px 32px;
+  border-radius: 30px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.botao-assinar:hover {
+  background-color: #1A00D3;
+  color: white;
+}
+
+.imagem-valores {
+  flex: 1;
+  min-width: 300px;
+  max-width: 400px;
+  text-align: center;
+}
+
+.imagem-valores img {
+  max-width: 100%;
+  min-height: 750px;
+}
+
+/* RODAPÉ */
+.rodape {
+  background-color: #1A00D3;
+  color: #F1EFE7;
+  padding: 40px 20px;
+  text-align: center;
+  font-style: italic;
+  font-size: 18px;
+}
+
+.rodape strong {
+  font-size: 24px;
+  font-style: italic;
+  margin-right: 20px;
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <div class="logo">
+      <img src="logo.png" alt="Logo Minimalista">
+    </div>
+    <div class="navbar-container">
+      <div class="textos-navbar">
+        <a href="#">HOME</a>
+        <a href="#">LUGARES</a>
+        <a href="#">PLANOS</a>
+        <a href="#">CONTATO</a>
+      </div>
+    </div>
+  </nav>
+  <hr>
+
+  <main class="plano-detalhe">
+    <div class="img-circular">
+      <img src="../Sem_Fronteiras/90dias.png" alt="90 Dias">
+    </div>
+    <h1>90 DIAS</h1>
+    <p class="descricao">
+        O Plano de 90 Dias da **Sem Fronteiras é um programa estruturado para garantir que seu intercâmbio seja uma experiência bem-sucedida, desde o planejamento até 
+        o retorno. Dividido em três fases, ele oferece suporte completo em todas as etapas:
+        1. Pré-Intercâmbio (Dias 1-30): Preparação detalhada, com auxílio na escolha do destino, documentação, vistos, acomodação e orientações culturais.  
+        2. Imersão e Adaptação (Dias 31-60): Apoio na chegada ao país, integração cultural, suporte emergencial e acompanhamento contínuo.  
+        3. Consolidação e Retorno (Dias 61-90): Avaliação dos resultados, certificação e preparação para o retorno, garantindo que o intercâmbio deixe um legado transformador.  
+        Com esse plano, a Sem Fronteiras assegura uma jornada organizada, segura e enriquecedora, permitindo que você aproveite ao máximo sua experiência no exterior.
+    </p>
+  </main>
+  <section class="competencias-valores">
+    <div class="texto-valores">
+      <h2 class="titulo-competencias">Competências</h2>
+      <p class="descricao-competencias">
+        <em>Nível Mínimo do Idioma<br>Passaporte<br>Visto</em>
+      </p>
+  
+      <h2 class="titulo-valores">Valores</h2>
+      <ul class="lista-valores">
+        <li><strong>Matrícula em Escola</strong> | R$5.800<br><small>Curso de inglês 20h/semana (material incluso)</small></li>
+        <li><strong>Acomodação Homestay</strong> | R$4.500<br><small>Quarto individual + café da manhã</small></li>
+        <li><strong>Seguro Saúde</strong> | R$850<br><small>Cobertura básica para 3 meses</small></li>
+        <li><strong>Taxa de Visto (F-1)</strong> | R$1.600<br><small>Inclui apoio da agência + taxa governamental</small></li>
+        <li><strong>Passagem Aérea</strong> | R$4.200<br><small>Ida e volta GRU/JFK (baixa temporada)</small></li>
+        <li><strong>Transfer Aeroporto</strong> | R$600<br><small>JFK → New Haven (opcional)</small></li>
+      </ul>
+      <div class="plano-texto">
+      <div class="total-container">
+        <p class="total-label">TOTAL BÁSICO</p>
+        <button>R$16.500,00</button>
+        <p class="observacao-total">Sem extras ou descontos</p>
+        <button class="botao-assinar">Assinar</button>
+        </div>
+      </div>
+    </div>
+  
+    <div class="imagem-valores">
+      <img src="../Sem_Fronteiras/viagem.png" alt="Turistas em trilha">
+    </div>
+  </section>
+  
+
+  <footer class="rodape">
+    <p><strong>contato</strong> &nbsp;&nbsp;&nbsp; (XX) 0000-0000 &nbsp;&nbsp;&nbsp; @sem_fronteiras &nbsp;&nbsp;&nbsp; Rua do Bobos, 0</p>
+  </footer>
+
+</body>
+</html>
