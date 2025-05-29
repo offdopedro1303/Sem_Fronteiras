@@ -12,7 +12,6 @@
       color: #1612d3;
     }
 
-
     nav {
       background-color: #F1EFE7;
       display: flex;
@@ -28,6 +27,9 @@
       z-index: 1000;
   }
 
+    html {
+      scroll-behavior: smooth;
+    }
 
     .logo {
       display: flex;
@@ -237,6 +239,26 @@
     }
 
     /* PLANOS */
+    .botao-link {
+      display: inline-block;
+      background-color: #1A00D3;
+      color: #F1EFE7;
+      border: none;
+      font-size: 20px;
+      font-style: italic;
+      font-weight: bold;
+      padding: 10px 30px;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+.botao-link:hover {
+  background-color: #12008a;
+}
+
     .planos {
       padding: 60px 60px 80px;
     }
@@ -323,15 +345,15 @@
     </div>
     <div class="navbar-container">
       <div class="textos-navbar">
-        <a href="#">HOME</a>
-        <a href="#">LUGARES</a>
-        <a href="#">PLANOS</a>
-        <a href="#">CONTATO</a>
+        <a href="#home">HOME</a>
+        <a href="#lugares">LUGARES</a>
+        <a href="#planos">PLANOS</a>
+        <a href="#contato">CONTATO</a>
       </div>
     </div>
   </nav>
   <!-- Sessão 1 -->
-  <section class="sessao1">
+  <section id="home" class="sessao1">
     <div class="logo-completo">
       <img src="logo1.png" alt="Logo Completa Sem Fronteiras">
     </div>
@@ -369,7 +391,7 @@
   </section>
 
   <!-- Sessão LUGARES -->
-  <section class="lugares">
+  <section id="lugares" class="lugares">
     <h2 class="titulo-lugares">LUGARES</h2>
     <div class="cards-lugares">
       <div class="lugar">
@@ -391,7 +413,7 @@
   </section>
 
   <!-- Sessão PLANOS -->
-    <section class="planos">
+    <section id="planos" class="planos">
         <section class="texto3">
             <h2>planos</h2>
         </section>
@@ -405,7 +427,7 @@
             casa com experiências que ficarão para sempre na sua memória.
             <br>
             Quer saber mais? Conte conosco para planejar sua experiência!</p>
-        <button>QUERO ESTE</button>
+        <a href="90dias.html" class="botao-link">QUERO MAIS</a>
         </div>
         <div class="plano-imagem">
         <img src="90dias.png" alt="Plano 90 dias">
@@ -421,7 +443,7 @@
             futuro que poucos têm na sua idade.
             <br>
             O mundo te espera. Qual país vai te chamar de "aluno"?</p>
-        <button>QUERO ESTE</button>
+            <a href="hightschool.html" class="botao-link">QUERO MAIS</a>
         </div>
         <div class="plano-imagem">
         <img src="hightschool.png" alt="Plano High School">
@@ -439,7 +461,7 @@
             Volte fluente não só no idioma, mas na linguagem do sucesso. Seja o profissional que o mundo espera.
             <br>
             Sua carreira sem fronteiras começa aqui.</p>
-        <button>QUERO ESTE</button>
+            <a href="posgraduacao.html" class="botao-link">QUERO MAIS</a>
         </div>
         <div class="plano-imagem">
         <img src="posgraduacao.png" alt="Plano Pós Graduação">
@@ -457,7 +479,7 @@
             que aceleram seu amadurecimento pessoal e profissional.
             <br>
             O mundo é o seu destino. Qual será o seu próximo passo?</p>
-        <button>QUERO ESTE</button>
+            <a href="workandtravel.html" class="botao-link">QUERO MAIS</a>
         </div>
         <div class="plano-imagem">
         <img src="workandtravel.png" alt="Plano Work and Travel">
@@ -471,8 +493,8 @@
     <br>
 
     <!-- Sessão FOOTER -->
-    <footer class="rodape">
-    <p><strong>contato</strong> &nbsp;&nbsp;&nbsp; (XX) 0000-0000 &nbsp;&nbsp;&nbsp; @sem_fronteiras &nbsp;&nbsp;&nbsp; Rua do Bobos, 0</p>
+    <footer id="contato" class="rodape">
+      <p><strong>contato</strong> &nbsp;&nbsp;&nbsp; (11) 3800-5355 &nbsp;&nbsp;&nbsp; @sem_fronteiras &nbsp;&nbsp;&nbsp; Avenida Paulista, 901 - 19° Andar - Sala 91</p>
     </footer>
 
 </body>
