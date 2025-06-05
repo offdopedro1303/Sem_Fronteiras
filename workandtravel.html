@@ -28,8 +28,8 @@ nav {
 }
 
 html {
-      scroll-behavior: smooth;
-    }
+  scroll-behavior: smooth;
+}
 
 .logo {
   display: flex;
@@ -199,20 +199,20 @@ html {
 }
 
 .botao-assinar {
-      display: inline-block;
-      background-color: #1A00D3;
-      color: #F1EFE7;
-      border: none;
-      font-size: 20px;
-      font-style: italic;
-      font-weight: bold;
-      padding: 10px 30px;
-      border-radius: 30px;
-      cursor: pointer;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-      text-decoration: none;
-      transition: background 0.3s;
-    }
+  display: inline-block;
+  background-color: #1A00D3;
+  color: #F1EFE7;
+  border: none;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: bold;
+  padding: 10px 30px;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  text-decoration: none;
+  transition: background 0.3s;
+}
 
 .botao-assinar:hover {
   background-color: #12008a;
@@ -230,6 +230,25 @@ html {
   min-height: 750px;
 }
 
+/* SEÇÃO DO VÍDEO */
+#video {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #EDEAE0;
+}
+
+#video h2 {
+  color: #1A00D3;
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+#video iframe {
+  max-width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
 /* RODAPÉ */
 .rodape {
   background-color: #1A00D3;
@@ -245,7 +264,6 @@ html {
   font-style: italic;
   margin-right: 20px;
 }
-
   </style>
 </head>
 <body>
@@ -260,6 +278,7 @@ html {
         <a href="../Sem_Fronteiras/index.html">HOME</a>
         <a href="../Sem_Fronteiras/index.html">LUGARES</a>
         <a href="../Sem_Fronteiras/index.html">PLANOS</a>
+        <a href="#video">VÍDEO</a>
         <a href="#contato">CONTATO</a>
       </div>
     </div>
@@ -277,6 +296,7 @@ html {
         cultural transformadora sua jornada profissional sem fronteiras começa aqui 🌍✈️💰 
     </p>
   </main>
+
   <section class="competencias-valores">
     <div class="texto-valores">
       <h2 class="titulo-competencias">Competências</h2>
@@ -294,11 +314,11 @@ html {
         <li><strong>Transfer Aeroporto</strong> | R$600<br><small>JFK → New Haven (opcional)</small></li>
       </ul>
       <div class="plano-texto">
-      <div class="total-container">
-        <p class="total-label">TOTAL BÁSICO</p>
-        <button>R$21.500,00</button>
-        <p class="observacao-total">Sem extras ou descontos</p>
-        <a href="pagamento.html" class="botao-assinar">Assinar</a>
+        <div class="total-container">
+          <p class="total-label">TOTAL BÁSICO</p>
+          <button>R$21.500,00</button>
+          <p class="observacao-total">Sem extras ou descontos</p>
+          <a href="pagamento.html" class="botao-assinar">Assinar</a>
         </div>
       </div>
     </div>
@@ -307,7 +327,14 @@ html {
       <img src="../Sem_Fronteiras/viagem3.png" alt="Turistas em trilha">
     </div>
   </section>
-  
+
+  <!-- SEÇÃO DO VÍDEO -->
+  <section id="video">
+    <h2>Explore os Estados Unidos</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/3Wk6H9nS5C8" 
+      title="Vídeo dos EUA" frameborder="0" allowfullscreen>
+    </iframe>
+  </section>
 
   <footer id="contato" class="rodape">
     <p><strong>contato</strong> &nbsp;&nbsp;&nbsp; (11) 3800-5355 &nbsp;&nbsp;&nbsp; @sem_fronteiras &nbsp;&nbsp;&nbsp; Avenida Paulista, 901 - 19° Andar - Sala 91</p>
